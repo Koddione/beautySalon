@@ -1,0 +1,15 @@
+@use './variables' as *;
+
+body {
+	background-color: $background-color;
+	display: flex;
+
+	justify-content: center;
+	// background: linear-gradient(
+	// 	to bottom,
+	// 	$pinkBlock-color 0%,
+	// 	$pinkBlock-color 522.641px,
+	// 	$background-color 50%,
+	// 	$background-color 100%
+	// );
+}

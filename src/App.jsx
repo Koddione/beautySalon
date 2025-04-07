@@ -1,5 +1,11 @@
+import { PinkBlock } from './components/pinkBlock/pinkBlock';
+
 function App() {
-	return <></>;
+	return (
+		<>
+			<PinkBlock />
+		</>
+	);
 }
 
 export default App;

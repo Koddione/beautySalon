@@ -1,0 +1,16 @@
+@use '../../../../styles/variables' as *;
+
+.container {
+	margin: 109px 62px 57px 21px;
+	font-size: 40px;
+}
+.title1 {
+	font-family: $font-title-1;
+	letter-spacing: 3px;
+}
+.title2 {
+	font-family: $font-title-2;
+	padding: 0 0 0 154px;
+	color: $title-2-color;
+	letter-spacing: 3px;
+}

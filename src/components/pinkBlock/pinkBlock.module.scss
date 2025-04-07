@@ -1,0 +1,12 @@
+@use '../../styles/variables' as *;
+
+.image {
+	max-width: 298px;
+	box-shadow: -25px -25px 6px #f0b2b250;
+	margin: 38px 14px 38px 0;
+}
+
+.container {
+	display: flex;
+	background-color: $pinkBlock-color;
+}
