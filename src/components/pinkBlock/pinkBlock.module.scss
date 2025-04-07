@@ -10,3 +10,21 @@
 	display: flex;
 	background-color: $pinkBlock-color;
 }
+
+.textContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.button {
+	margin: 0 auto;
+	background: none;
+	font-size: 36px;
+	font-family: $font-cursive;
+	color: $button-color;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+.button:hover {
+	color: $title-2-color;
+}

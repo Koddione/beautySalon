@@ -1,15 +1,18 @@
 @use '../../../../styles/variables' as *;
 
 .container {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
 	margin: 109px 62px 57px 21px;
 	font-size: 40px;
 }
 .title1 {
-	font-family: $font-title-1;
+	font-family: $font-text-second;
 	letter-spacing: 3px;
 }
 .title2 {
-	font-family: $font-title-2;
+	font-family: $font-cursive;
 	padding: 0 0 0 154px;
 	color: $title-2-color;
 	letter-spacing: 3px;

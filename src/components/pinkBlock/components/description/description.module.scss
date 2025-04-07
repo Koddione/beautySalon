@@ -1,0 +1,18 @@
+@use '../../../../styles/variables' as *;
+
+.description {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+	max-width: 687px;
+	margin: 0 0 57px 37px;
+	font-size: 20px;
+	font-family: $font-text-main;
+}
+
+.desc1 {
+	font-weight: 400;
+}
+.desc2 {
+	font-weight: 300;
+}
