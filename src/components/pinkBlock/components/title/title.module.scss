@@ -13,7 +13,36 @@
 }
 .title2 {
 	font-family: $font-cursive;
-	padding: 0 0 0 154px;
+	padding: 0 0 0 140px;
 	color: $title-2-color;
 	letter-spacing: 3px;
+}
+
+@media (max-width: 1190px) {
+	.title2 {
+		padding: 0 0 0 0;
+		letter-spacing: 1px;
+	}
+	.title1 {
+		letter-spacing: 0px;
+	}
+}
+@media (max-width: 1108px) {
+	.container {
+		margin: 20px 0;
+		text-align: center;
+	}
+}
+@media (max-width: 662px) {
+	.title1 {
+		font-size: 30px;
+	}
+	.title2 {
+		font-size: 30px;
+	}
+}
+@media (max-width: 414px) {
+	.title1 {
+		margin-bottom: 20px;
+	}
 }

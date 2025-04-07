@@ -9,6 +9,7 @@
 .container {
 	display: flex;
 	background-color: $pinkBlock-color;
+	max-width: 1200px;
 }
 
 .textContainer {
@@ -27,4 +28,32 @@
 }
 .button:hover {
 	color: $title-2-color;
+}
+
+@media (max-width: 1108px) {
+	.container {
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.image {
+		margin: 40px 0 0 0;
+	}
+	.button {
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 662px) {
+	.image {
+		box-shadow: -10px -10px 6px #f0b2b270;
+		max-width: 200px;
+	}
+}
+@media (max-width: 414px) {
+	.textContainer {
+		gap: 20px;
+		margin: 0 10px;
+	}
 }
