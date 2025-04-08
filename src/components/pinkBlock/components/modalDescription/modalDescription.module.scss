@@ -1,0 +1,68 @@
+@use '../../../../styles/variables' as *;
+
+.container {
+	position: fixed;
+	max-width: 400px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: $font-text-main;
+	letter-spacing: 1px;
+	font-weight: 300;
+	font-size: 20px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 20px;
+	padding: 20px 30px;
+	z-index: 11;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+
+	.close {
+		font-size: 30px;
+		width: 100%;
+		text-align: right;
+		margin-bottom: -5px;
+		cursor: pointer;
+		font-weight: 500;
+	}
+	.close:hover {
+		opacity: 0.7;
+	}
+	.close:active {
+		color: rgb(247, 128, 128);
+	}
+	p {
+		text-align: justify;
+	}
+}
+.shadow {
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.164);
+	width: 100%;
+	height: 100%;
+}
+
+@media (max-width: 606px) {
+	.container {
+		font-size: 17px;
+		letter-spacing: 0;
+	}
+	.close {
+		font-size: 20px;
+	}
+}
+@media (max-width: 474px) {
+	.container {
+		width: 300px;
+		font-size: 17px;
+	}
+}
+@media (max-width: 308px) {
+	.container {
+		font-size: 15px;
+	}
+}
