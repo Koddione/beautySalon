@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { schema } from '../../../../schemas/schemaBuy';
 
-export const ModalForm = ({ setIsOpen }) => {
+export const ModalForm = ({ setIsOpen, id = 'modal-form' }) => {
 	const {
 		register,
 		handleSubmit,
@@ -17,11 +17,22 @@ export const ModalForm = ({ setIsOpen }) => {
 	};
 	return (
 		<>
-			<div className={styles.shadow}></div>
-			<div className={styles.container}>
-				<div className={styles.close} onClick={() => setIsOpen(false)}>
+			<div className={styles.shadow} aria-hidden="true" />
+			<dialog
+				className={styles.container}
+				id={id}
+				open
+				aria-labelledby={`${id}-title`}
+				aria-modal="true"
+				role="dialog"
+			>
+				<button
+					className={styles.close}
+					onClick={() => setIsOpen(false)}
+					aria-label="Закрыть модальное окно"
+				>
 					&times;
-				</div>
+				</button>
 				<form onSubmit={handleSubmit(onSubmit)}>
 					<InputField
 						idName={'name'}
@@ -41,13 +52,16 @@ export const ModalForm = ({ setIsOpen }) => {
 						idName={'instagram'}
 						placeHolder="Имя пользователя instagram"
 					/>
-					<button type="submit">Оставить заявку</button>
+					<button type="submit" className={styles.button}>
+						Оставить заявку
+					</button>
 				</form>
-			</div>
+			</dialog>
 		</>
 	);
 };
 
 ModalForm.propTypes = {
 	setIsOpen: PropTypes.func,
+	id: PropTypes.string,
 };

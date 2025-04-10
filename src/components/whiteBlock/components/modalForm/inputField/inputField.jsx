@@ -4,8 +4,15 @@ import PropTypes from 'Prop-types';
 export const InputField = ({ placeHolder, register, errors, idName }) => {
 	return (
 		<div className={styles.input}>
-			<input type="text" {...register(idName)} placeholder={placeHolder} />
-			<p>{errors?.[idName]?.message} &#8203;</p>
+			<input
+				id={idName}
+				type="text"
+				{...register(idName)}
+				placeholder={placeHolder}
+				aria-invalid={!!errors?.[idName]}
+				aria-describedby={`${idName}-error`}
+			/>
+			<p id={`${idName}-error`}>{errors?.[idName]?.message} &#8203;</p>
 		</div>
 	);
 };

@@ -13,16 +13,22 @@ export const PinkBlock = () => {
 	};
 
 	return (
-		<div className={styles.container}>
-			<div className={styles.textContainer}>
-				<Title />
+		<section className={styles.container} aria-labelledby="about-ksu">
+			<article className={styles.textContainer}>
+				<Title id="about-ksu" />
 				<Description />
-				<button className={styles.button} onClick={handleClickOpen}>
+				<button
+					className={styles.button}
+					onClick={handleClickOpen}
+					aria-controls="modal-description"
+				>
 					Узнать подробнее
 				</button>
-				{isOpen && <ModalDescription setIsOpen={setIsOpen} />}
-			</div>
-			<img className={styles.image} src={photo} alt="Ксения" />
-		</div>
+				{isOpen && (
+					<ModalDescription setIsOpen={setIsOpen} id="modal-description" />
+				)}
+			</article>
+			<img className={styles.image} src={photo} alt="Портрет Ксении" />
+		</section>
 	);
 };

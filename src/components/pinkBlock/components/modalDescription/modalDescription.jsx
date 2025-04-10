@@ -1,18 +1,29 @@
 import styles from './modalDescription.module.scss';
 import PropTypes from 'Prop-types';
 
-export const ModalDescription = ({ setIsOpen }) => {
+export const ModalDescription = ({ setIsOpen, id = 'modal-description' }) => {
 	const handleCliskClose = () => {
 		setIsOpen(false);
 	};
 
 	return (
 		<>
-			<div className={styles.shadow}></div>
-			<div className={styles.container}>
-				<div className={styles.close} onClick={handleCliskClose}>
+			<div className={styles.shadow} aria-hidden="true" />
+			<dialog
+				className={styles.container}
+				id={id}
+				open
+				aria-labelledby={`${id}-title`}
+				aria-modal="true"
+				role="dialog"
+			>
+				<button
+					className={styles.close}
+					onClick={handleCliskClose}
+					aria-label="Закрыть модальное окно"
+				>
 					&times;
-				</div>
+				</button>
 				<p>
 					Соединив магию своих рук и силу ума, я создала возможность для каждой
 					женщины быть самой себе целителем.
@@ -30,11 +41,12 @@ export const ModalDescription = ({ setIsOpen }) => {
 					могу предложить эффективные техники для профилактики и замедления
 					возрастных изменений.
 				</p>
-			</div>
+			</dialog>
 		</>
 	);
 };
 
 ModalDescription.propTypes = {
 	setIsOpen: PropTypes.func,
+	id: PropTypes.string,
 };
