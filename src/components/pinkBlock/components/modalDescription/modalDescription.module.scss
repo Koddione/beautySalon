@@ -17,11 +17,12 @@
 	display: flex;
 	flex-direction: column;
 	gap: 25px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418);
 
 	.close {
+		display: flex;
+		max-width: 20px;
 		font-size: 30px;
-		width: 100%;
-		text-align: right;
 		margin-bottom: -5px;
 		cursor: pointer;
 		font-weight: 500;

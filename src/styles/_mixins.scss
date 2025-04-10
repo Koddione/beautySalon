@@ -1,0 +1,32 @@
+@use './variables' as *;
+
+@mixin center-element {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@mixin container-styles($max-width, $font-size, $font-weight) {
+	font-family: $font-text-main;
+	letter-spacing: 1px;
+	font-weight: $font-weight;
+	font-size: $font-size;
+	background-color: rgb(255, 255, 255);
+	border-radius: 20px;
+	padding: 20px 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418);
+	max-width: $max-width;
+	z-index: 11;
+}
+@mixin shadow($background-color, $z-index) {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $background-color;
+	z-index: $z-index;
+}

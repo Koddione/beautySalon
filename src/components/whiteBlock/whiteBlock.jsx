@@ -1,14 +1,20 @@
 import styles from './whiteBlock.module.scss';
 import picture from '../../assets/selecon.jpg';
 import { Table } from './components/table/table';
+import { ModalForm } from './components/modalForm/modalForm';
+import { useState } from 'react';
 
 export const WhiteBlock = () => {
+	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<div className={styles.container}>
 			<p className={styles.title}>
 				Курс <br /> САМОМАССАЖ лица
 			</p>
-			<button className={styles.btn}>Купить</button>
+			<button className={styles.btn} onClick={() => setIsOpen(true)}>
+				Купить
+			</button>
+			{isOpen && <ModalForm setIsOpen={setIsOpen} />}
 			<div className={styles.info}>
 				<div className={styles.textInfo}>
 					<img className={styles.image} src={picture} alt="фото" />
