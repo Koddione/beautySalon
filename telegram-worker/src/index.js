@@ -22,7 +22,6 @@ export default {
 
 		try {
 			const { name, telegram, instagram } = await request.json();
-
 			const text = `📩 *Новая заявка с сайта!*
 
 👤 *Имя:* ${name}
