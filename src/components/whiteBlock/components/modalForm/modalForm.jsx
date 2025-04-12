@@ -12,8 +12,26 @@ export const ModalForm = ({ setIsOpen, id = 'modal-form' }) => {
 		formState: { errors },
 	} = useForm({ resolver: yupResolver(schema) });
 
-	const onSubmit = (data) => {
-		console.log(data);
+	const onSubmit = async (data) => {
+		try {
+			const response = await fetch('https://telegram-worker.koddione.workers.dev', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(data),
+			});
+
+			if (response.ok) {
+				alert('Заявка успешно отправлена! 🥳');
+				setIsOpen(false);
+			} else {
+				alert('Что-то пошло не так 😢 Попробуйте позже.');
+			}
+		} catch (error) {
+			console.error('Ошибка при отправке:', error);
+			alert('Ошибка при отправке 😵 Проверьте соединение.');
+		}
 	};
 	return (
 		<>
