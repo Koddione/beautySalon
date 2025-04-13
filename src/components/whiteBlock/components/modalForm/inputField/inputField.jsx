@@ -1,5 +1,5 @@
 import styles from './inputField.module.scss';
-import PropTypes from 'Prop-types';
+import PropTypes from 'prop-types';
 
 export const InputField = ({ placeHolder, register, errors, idName }) => {
 	return (

@@ -1,5 +1,5 @@
 import styles from './modalDescription.module.scss';
-import PropTypes from 'Prop-types';
+import PropTypes from 'prop-types';
 
 export const ModalDescription = ({ setIsOpen, id = 'modal-description' }) => {
 	const handleCliskClose = () => {

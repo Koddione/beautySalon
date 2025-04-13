@@ -1,6 +1,6 @@
 import { InputField } from './inputField/inputField';
 import styles from './modalForm.module.scss';
-import PropTypes from 'Prop-types';
+import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { schema } from '../../../../schemas/schemaBuy';
